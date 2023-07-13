@@ -1,0 +1,145 @@
+.subtitle {
+  color: #087ea4;
+  margin: 0;
+  text-align: center;
+}
+
+.text {
+  margin: 0;
+}
+
+.section {
+  padding: 2.5rem 0;
+}
+
+.section--lg {
+  padding: 5rem 0;
+}
+
+.hero {
+  position: relative;
+  min-height: 50vh;
+}
+
+
+.container--movie-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min(220px, 100%));
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+
+  & .card__img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+
+  & .card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  & .card__title {
+    margin: 0;
+    color: #f6f7f8;
+    font-size: 1.25rem;
+    text-align: center;
+    text-shadow:
+      0 0 0.5rem #087ea4,
+      0 0 1rem #087ea4;
+  }
+
+  & .card__subtitle {
+    margin: 0;
+    color: #f6f7f8;
+    font-size: 1rem;
+    text-align: center;
+    text-shadow: 0 0 0.5rem #087ea4;
+  }
+}
+
+.card:hover .card__overlay {
+  opacity: 1;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #16181d80;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.action {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+
+  & button {
+    all: unset;
+    background-color: #087ea4;
+    padding: 0.25em 1em;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: filter 0.25s;
+
+    &:hover {
+      filter: brightness(1.25);
+    }
+  }
+}
+
+.img--background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list {
+  all: unset;
+  list-style: none;
+  display: flex;
+  /* justify-content: center; */
+  gap: 0.5rem;
+
+
+}
+
+.t-align-start {
+  text-align: start;
+}
