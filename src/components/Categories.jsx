@@ -18,7 +18,7 @@ const Categories = () => {
   return (
     <section className="py-8 h-full m-auto md:">
       <div className="container h-full m-auto ">
-        <h2 className="text-center font-bold text-xl mt-10 md:mt-10 md:font-extrabold md:text-6xl hover:text-sky-500 transition ">
+        <h2 className="text-center font-bold text-xl mt-10 md:mt-11 md:font-extrabold md:text-6xl hover:text-sky-500 transition ">
           Categorías
         </h2>
         <div className="grid md:grid-cols-[repeat(auto-fit,_minmax(256px,_1fr))] place-items-center place-content-center gap-6  mt-5 mb-5 md:mt-20 md:mb-20">
