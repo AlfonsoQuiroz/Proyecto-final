@@ -6,7 +6,7 @@ import Movies from "../components/Movies";
 import MovieDetail from "../pages/MovieDetail";
 import Categories from "../components/Categories";
 import Series from "../components/Series";
-import SeriesDetail from "../pages/SeriesDEtail";
+import SeriesDetail from "../pages/SeriesDetail";
 
 export const router = createBrowserRouter([
     {

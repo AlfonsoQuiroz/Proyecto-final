@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Series = () => {
+
   const [tv, setTv] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -49,10 +50,11 @@ const Series = () => {
         <h2 className="text-center mb-4 font-extrabold text-2xl hover:text-sky-600 transition-all overflow-hidden">Series</h2>
         <div className="movies">
           {tv.map(element => {
-            const { id, poster_path, vote_average,original_name } = element;
+            const { id, poster_path, vote_average, original_name } = element;
             return (
               <Link
                 key={id}
+                to={`/tv/${id}`}
                 className="card"
               >
                 <img src={'https://image.tmdb.org/t/p/w300' + poster_path} alt={original_name} width={220} height={330} className="card__img" />

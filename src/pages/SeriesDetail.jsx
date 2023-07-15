@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const SeriesDetail = () => {
+ 
     const { tvId } = useParams();
-    const [movie, setMovie] = useState({});
+    const [Series, setTv] = useState({});
 
     const { backdrop_path, budget, genres, homepage, original_language, original_title, overview, production_companies, production_countries, release_date, revenue, runtime, spoken_languages, tagline, vote_average } = movie;
 
@@ -36,10 +37,11 @@ const SeriesDetail = () => {
             };
             const response = await fetch(url, options);
             const data = await response.json();
-            setMovie(data);
+            setTv(data);
         };
         fetchApi();
     }, []);
+
 
     return (
         <>
